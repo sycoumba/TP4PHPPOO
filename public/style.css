@@ -1,0 +1,64 @@
+body{
+	font-family: verdana, arial, sans serif;
+	background-color:#504DC1;
+}
+.main{display: flex;
+	padding:0px;
+        margin:10px;
+        background-color: white;
+
+}
+h1{
+        float: right;
+        color:blueviolet;
+}
+h2{
+      background-color:white;  
+      padding: 10px;
+      margin: 30px;
+      text-align: center;
+      color:blueviolet;
+      border-radius: 75px;
+}
+
+h3{
+        color:blueviolet;
+        text-align: center;
+}
+h4{
+        color:blueviolet;
+        text-align: center;
+}
+h5{
+        color:blueviolet;
+        text-align: center;
+        font-size: 100%;
+}
+h6{
+        color:blueviolet;
+        text-align: center;
+        font-size: 100%;
+}
+::placeholder{
+        color: blueviolet;
+
+}
+strong{
+        color: red;
+}
+.info1{
+        width: 70%;
+        background-color: white;
+        left: 45%;
+        padding: 20px;
+        margin: 90px;
+}
+p{
+        color:blueviolet ;
+}
+#valider{
+        background-color:blueviolet ;
+}
+#retour{
+        background-color:blueviolet ;
+}
