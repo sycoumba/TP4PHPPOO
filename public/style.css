@@ -11,40 +11,47 @@ body{
 h1{
         float: right;
         color:blueviolet;
+        background-color: white;
 }
 h2{
       background-color:white;  
-      padding: 10px;
-      margin: 30px;
+      padding: 20px;
+      margin: 20px;
       text-align: center;
       color:blueviolet;
       border-radius: 75px;
+      width: 80%;
+      left: 30px;
 }
 
 h3{
-        color:blueviolet;
-        text-align: center;
+        color:white;
+
 }
-h4{
-        color:blueviolet;
-        text-align: center;
+legend{
+        color: blueviolet;
 }
-h5{
-        color:blueviolet;
-        text-align: center;
-        font-size: 100%;
+label{
+        color: blueviolet;
 }
-h6{
-        color:blueviolet;
-        text-align: center;
-        font-size: 100%;
+#responsable a{
+        display: inline-block;
+        background-color: white;
+        padding: 20px;
+        margin: 50px;
+        text-decoration: none;
+
+}
+#client_moral{
+        background-color: white;
+        width: 40%;
+        left: 35%;
+        float:45%
+      
 }
 ::placeholder{
         color: blueviolet;
 
-}
-strong{
-        color: red;
 }
 .info1{
         width: 70%;
@@ -54,7 +61,57 @@ strong{
         margin: 90px;
 }
 p{
-        color:blueviolet ;
+        color:white ;
+}
+#loginresp
+{
+        width: 80px;
+        background-color: white;
+        
+}
+#login{
+        position: relative;
+        left:35%;
+        float: 50%;
+        margin: 30px;
+
+}
+#compte_courant{
+        position: relative;
+        left:35%;
+        float: 50%;
+        margin: 30px;
+        width: 60px;
+        background-color: white;
+}
+#compte_bloque{
+        width: 60px;
+        background-color: white;
+        left:55%;
+        float: 30%;
+        
+}
+#salarie{
+        width: 60px;
+      
+
+}
+#client_salarie{
+        background-color: white;
+        width: 30%;
+}
+#client_non_salarie{
+        background-color: white;
+        width: 30%;
+
+}
+#compte_epargne{
+        background-color: white;
+        width: 30%;
+        left:55%;
+        float: 30%;
+
+
 }
 #valider{
         background-color:blueviolet ;

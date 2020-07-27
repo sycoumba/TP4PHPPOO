@@ -1,18 +1,23 @@
 <?php
 
-class client_moral extends client
+class Client_moral 
 {
+   private $id_client;
    private $type_entreprise;
    private $activite_entreprise;
    private $nom_entreprise;
    private $raison_social;
    private $identifiant_entreprise;
    private $adresse_entreprise;
-
-    function __construct() // Constructeur demandant 3 paramètres
+ 
+    public function __construct() // Constructeur demandant 3 paramètres
     {
-        parent::__construct();  
+        // parent::__construct();  
         
+    }
+    public function setId_client($id_client)
+    {
+        $this->id_client = $id_client;
     }
 
     public function setType_entreprise($type_entreprise)
@@ -39,6 +44,11 @@ class client_moral extends client
     public function setAdresse_entreprise($adresse_entreprise)
     {
         $this->adresse_entreprise = $adresse_entreprise;
+    }
+    // getters
+    public function getId_client()
+    {
+        return $this->id_client;
     }
     public function getType_entreprise()
     {

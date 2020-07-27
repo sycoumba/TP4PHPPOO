@@ -1,10 +1,11 @@
 <?php
 
-class client
+class Client
 {
-    protected $adresse;
-    protected $telephone;
-    protected $email;
+    private $id_client;
+    private $adresse;
+    private $telephone;
+    private $email;
 
     function __construct() // Constructeur demandant 3 paramètres
     {
@@ -12,7 +13,10 @@ class client
         // $this->adresse = $adresse; // Initialisation de l'adresse.
         // $this->telephone = $telephone; // Initialisation de telephone.
     }
-   
+    public function setId_client($id_client)
+    {
+       $this->id_client = $id_client;
+    }
     public function setadresse($adresse)
     {
        $this->adresse = $adresse;
@@ -24,6 +28,13 @@ class client
     public function setemail($email)
     {
        $this->email = $email;
+    }
+    // getters
+   
+   
+     public function getId_client()
+    {
+        return $this->id_client;
     }
     public function getAdresse()
     {
@@ -39,4 +50,5 @@ class client
 
     }
 }
+
     ?>

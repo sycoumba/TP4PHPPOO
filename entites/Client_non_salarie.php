@@ -9,7 +9,7 @@
 
     function __construct() // Constructeur demandant 3 paramètres
     {
-        parent::__construct();  
+        // parent::__construct();  
     }
 
     public function setPrenom($prenom)
