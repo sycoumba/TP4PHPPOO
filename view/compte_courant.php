@@ -33,6 +33,10 @@
                         <input type="text" name="cle_rib" id="cle_rib" placeholder="Entrer la cle_rib"></p>
                 </div>
                 <div>
+                <label>solde_compte:</label>
+                        <input type="text" name="solde_compte" id="solde_compte" placeholder="Entrer le solde_compte"></p>
+                </div>
+                <div>
                 <label> date_ouverture:</label>
                         <input type="date" name="date_ouverture" id="date_ouverture"></p>
                 </div>

@@ -1,46 +1,58 @@
 <?php
 
-    class client_non_salarie  extends client
+    class client_non_salarie 
 {
-    private $prenom;
-    private $activite_client;
+    private $id_client;
     private $nom;
+    private $prenom;
+    private $activite;
     private $cni;
 
     function __construct() // Constructeur demandant 3 paramètres
     {
         // parent::__construct();  
     }
-
-    public function setPrenom($prenom)
+    public function setId_client($id_client)
     {
-       $this->prenom = $prenom;
-    }
-    public function setActivite_client($activite_client)
-    {
-       $this->activite_client = $activite_client;
+        $this->id_client = $id_client;
     }
     public function setNom($nom)
     {
        $this->nom = $nom;
     }
-       public function setCni()
+
+    public function setPrenom($prenom)
     {
-        return $this->cni;
+       $this->prenom = $prenom;
+    }
+    public function setActivite($activite)
+    {
+       $this->activite = $activite;
+    }
+   
+       public function setCni($cni)
+    {
+         $this->cni = $cni;
     
     }
-    public function getPrenom()
+    // getters
+    public function getId_client()
     {
-        return $this->prenom;
-    }
-    public function getActivite_client()
-    {
-        return $this->activite_client;
+        return $this->id_client;
     }
     public function getNom()
     {
         return $this->nom;
     }
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+    public function getActivite()
+    {
+        return $this->activite;
+    }
+    
     public function getCni()
     {
         return $this->cni;

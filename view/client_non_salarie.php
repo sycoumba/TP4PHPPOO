@@ -41,10 +41,21 @@
             <label> prenom:</label>
                     <input type="Texte" name="prenom" id="prenom" placeholder="Entrer le prenom">
             </div>
-        
             <div>
-            <label> activite_client :</label>
-                    <input type="text" name=" activite_client" id=" activite_client" placeholder="Entrer  l' activite_client"></p>
+               <label> adresse:</label>
+                    <input type="Text" name="adresse" id="adresse" placeholder="Entrer l'adresse">
+            </div>
+            <div>
+               <label> telephone:</label>
+                    <input type="Text" name="telephone" id="telephone" placeholder="Entrer le telephone">
+            </div>
+            <div>
+               <label> email:</label>
+                    <input type="Text" name="email" id="email" placeholder="Entrer l' email">
+            </div>
+            <div>
+            <label> activite :</label>
+                    <input type="text" name=" activite" id=" activite" placeholder="Entrer  l' activite"></p>
             </div>
             <div>
             <label>cni:</label>

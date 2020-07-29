@@ -4,19 +4,20 @@
 	require_once ("../model/Manager.php");
     require_once ("../entites/Compte.php");
     require_once ("../entites/Compte_courant.php");
+    require_once ("../entites/Client.php");
     $manager = new Manager($db);
 
-	extract($_POST);
-
+    extract($_POST);
+// $client = new Client();
 //insertion des infos dans la table compte
-$comptes = new Compte ();
-$comptes->setnumero_compte($numero_compte);
-$comptes-> setcle_rib($cle_rib);
-// $comptes-> setsolde_compte($solde_compte);
-$comptes->setnumero_agence($numero_agence);
-$comptes->setdate_ouverture($date_ouverture);
+$compte = new Compte ();
+$compte->setnumero_compte($numero_compte);
+$compte->setcle_rib($cle_rib);
+$compte->setsolde_compte($solde_compte);
+$compte->setnumero_agence($numero_agence);
+$compte->setdate_ouverture($date_ouverture);
 // $id_client = $manager->addClient($client);
-$id_compte = $manager->addComptes($comptes);
+$id_compte = $manager->addCompte($compte);
 
 //insertion des infos dans la table compte courant
 $compte_courant = new compte_courant ();

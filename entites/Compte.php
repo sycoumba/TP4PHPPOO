@@ -2,18 +2,25 @@
 
 class Compte
 {
+    protected $id_compte;
     protected $numero_compte;
     protected $cle_rib;
     protected $solde_compte;
     protected $numero_agence;
     protected $date_ouverture;
     protected $id_client;
+    protected $id_responsable;
+
 
     function __construct() // Constructeur demandant 3 paramètres
     {
         // echo 'Voici le constructeur !'; // Message s'affichant une fois que tout objet est créé.
         // $this->adresse = $adresse; // Initialisation de l'adresse.
         // $this->telephone = $telephone; // Initialisation de telephone.
+    }
+    public function setId_compte($id_compte)
+    {
+       $this->id_compte = $id_compte;
     }
    
     public function setnumero_compte($numero_compte)
@@ -40,7 +47,15 @@ class Compte
     {
        $this->id_client = $id_client;
     }
+    public function setId_responsable($id_responsable)
+    {
+       $this->id_responsable = $id_responsable;
+    }
     // getters
+    public function getId_compte()
+    {
+        return $this->id_compte;
+    }
     public function getNumero_compte()
     {
         return $this->numero_compte;
@@ -49,7 +64,7 @@ class Compte
     {
         return $this->cle_rib;
     }
-    public function getSolde()
+    public function getSolde_compte()
     {
         return $this->solde_compte;
 
@@ -67,6 +82,11 @@ class Compte
     public function getId_client()
     {
         return $this->id_client;
+
+    }
+    public function getId_responsable()
+    {
+        return $this->id_responsable;
 
     }
 

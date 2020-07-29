@@ -56,3 +56,4 @@ $manager->addClientMoral($client_moral);
     // $comptes = new Comptes($numero_compte, $cle_rib, $solde, $numero_agence, $date_ouverture, 
     // $id_responsable, $id_client);
 	// $id_compte = $manager->addComptes($comptes);
+	?>

@@ -27,6 +27,19 @@
 			}
 		}
 
+		public function verifieClientNonSalarieExiste($id_non_salarie)
+		{
+			$test = $this->_db->prepare('SELECT id_client FROM client_non_salarie  WHERE 
+            id_non_salarie = ?');
+			$test->execute(array($id_non_salarie));
+
+			//$reponse = $test->fetch();
+			if($reponse = $test->fetch())
+			{
+				return $reponse['id_client'];
+			}
+		}
+
 		public function addClient(Client $client)
 		{
 			$req = $this->_db->prepare('INSERT INTO client (adresse, telephone, email) 
@@ -58,24 +71,39 @@
 			'id_client' => $client_moral->getId_client()
 			));
 			$req->closeCursor();
-        }
-        public function addComptes($comptes)
+		}
+		public function addClientNonSalarie(client_non_salarie $client_non_salarie)
 		{
-			$req = $this->_db->prepare('INSERT INTO comptes(numero_compte, cle_rib, solde,
-             numero_agence, date_ouverture, id_responsable, id_client) VALUES(:numero_compte,
-              :cle_rib, :solde, :date_ouverture, :numero_agence:id_client)');
+			//insertion des Infos dans la table client non salarie
+			$req = $this->_db->prepare('INSERT INTO client_non_salarie (nom, 
+			prenom, activite, numero_CNI, id_client) 
+            VALUES(:nom, :prenom, :activite, :cni, :id_client)');
 			$req->execute(array(
-				'numero_compte' => $comptes->getNumero_compte(),
-				'cle_rib' => $comptes->getCle_rib(),
-				'solde' => $comptes->getSolde(),
-                'numero_agence' => $comptes->getNumero_agence(),
-                'date_ouverture' => $comptes->getDateOuverture(),
-                // 'id_responsable' => $comptes->getIdresponsable(),
-				'id_client' => $comptes->getId_client()
+            'nom' => $client_non_salarie->getNom(),
+            'prenom' => $client_non_salarie->getPrenom(),
+			'activite' => $client_non_salarie->getActivite(),
+            'cni' => $client_non_salarie->getCni(),
+			 'id_client' => $client_non_salarie->getId_client()
+			));
+			$req->closeCursor();
+		}
+        public function addCompte(compte $compte)
+		{
+			$req = $this->_db->prepare('INSERT INTO comptes(numero_compte, cle_rib, solde_compte,
+             numero_agence, date_ouverture) VALUES(:numero_compte,
+              :cle_rib, :solde_compte, :numero_agence, :date_ouverture)');
+			$req->execute(array(
+				'numero_compte' => $compte->getNumero_compte(),
+				'cle_rib' => $compte->getCle_rib(),
+				'solde_compte' => $compte->getSolde_compte(),
+                'numero_agence' => $compte->getNumero_agence(),
+                'date_ouverture' => $compte->getDateOuverture(),
+                //'id_responsable' => $compte->getId_responsable(),
+				//'id_client' => $compte->getId_client()
 			));
 
-			$id_comptes = $this->_db->lastInsertId();
-			return $id_comptes;
+			$id_compte = $this->_db->lastInsertId();
+			return $id_compte;
 
 			$req->closeCursor();
         }
